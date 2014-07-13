@@ -7,7 +7,7 @@ if(typeof(document.getElementsByClassName) == "undefined")
 function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
-var site = "http://192.168.1.101:8080";
+var site = "http://raw.githubusercontent.com/LYF610400210/BilibiliSrc.js/master";
 var body=document.getElementsByTagName("body")[0];
 
 var js1=document.createElement("script");
@@ -19,6 +19,6 @@ js2.setAttribute("src", site + "/md5-min.js");
 insertAfter(js1, js2);
 
 var js3=document.createElement("script");
-js3.innerHTML = "Replace();";
+js3.innerHTML = "try{ Replace(); }catch(err){ alert('切换失败，请再点击一次！'); }";
 insertAfter(js2, js3);
 /*文件末尾*/
